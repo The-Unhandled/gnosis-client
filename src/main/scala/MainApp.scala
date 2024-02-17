@@ -2,6 +2,7 @@ package xyz.forsaken.gnosisclient
 
 import gnosisscan.{AccountsClient, BalanceEndpoint, BalanceEndpointLayer, GnosisScanAccountsClient}
 
+import xyz.forsaken.gnosisclient.slack.SlackClientLayer
 import zio.*
 import zio.config.typesafe.TypesafeConfigProvider
 import zio.http.*
@@ -43,6 +44,7 @@ object MainApp extends ZIOAppDefault:
         serverConfig,
         BalanceEndpointLayer.layer,
         GnosisScanAccountsClient.layer,
+        SlackClientLayer.layer,
         Client.default,
         Server.live
       )

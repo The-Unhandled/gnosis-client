@@ -6,7 +6,6 @@ import com.github.plokhotnyuk.jsoniter_scala.macros.*
 import zio.*
 import zio.http.*
 import zio.http.Header.ContentType
-import zio.http.ZClient.BodyEncoder
 
 import javax.naming.ConfigurationException
 
@@ -27,7 +26,7 @@ class SlackClientLayer(config: SlackConfig, httpClient: Client)
     given codec: JsonValueCodec[SlackMessage] = JsonCodecMaker.make
 
   def notify(message: String): Task[Unit] =
-    
+
     // FIXME:
     val url: URL = URL
       .fromURI(config.webhook)
@@ -38,7 +37,7 @@ class SlackClientLayer(config: SlackConfig, httpClient: Client)
         .url(url)
         .addHeader(Header.ContentType(MediaType.application.json))
         .post("")(Body.fromString(writeToString(SlackMessage(message))))
-      
+
       _ <- ZIO.logInfo(s"response: $response")
       _ <- ZIO.logInfo(s"Slack notification sent to $SLACK_CHANNEL: $message")
     yield ()).provideSomeLayer(Scope.default)

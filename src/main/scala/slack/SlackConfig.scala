@@ -3,6 +3,7 @@ package slack
 
 import zio.Config
 import zio.config.magnolia.deriveConfig
+
 import java.net.URI
 
 case class SlackConfig(webhook: URI)

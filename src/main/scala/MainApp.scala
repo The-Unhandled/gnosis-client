@@ -1,8 +1,8 @@
 package xyz.forsaken.gnosisclient
 
-import gnosisscan.{AccountsClient, BalanceEndpoint, BalanceEndpointLayer, GnosisScanAccountsClient}
+import gnosisscan.{AccountsClient, BalanceEndpoint, BalanceEndpointImpl, ContractEndpointImpl, ContractsEndpoint, GnosisScanAccountsClient, GnosisScanContractsClient}
+import slack.SlackClientLayer
 
-import xyz.forsaken.gnosisclient.slack.SlackClientLayer
 import zio.*
 import zio.config.typesafe.TypesafeConfigProvider
 import zio.http.*
@@ -34,7 +34,8 @@ object MainApp extends ZIOAppDefault:
   def run =
     (for
       balanceEndpoint <- ZIO.service[BalanceEndpoint]
-      routes = Routes(textRoute) ++ balanceEndpoint.routes
+      contractEndpoint <- ZIO.service[ContractsEndpoint]
+      routes = Routes(textRoute) ++ balanceEndpoint.routes ++ contractEndpoint.routes
       app = routes.handleError(errorHandler).toHttpApp
       // Fixme: install then log
       port <- Server.serve(app)
@@ -42,8 +43,10 @@ object MainApp extends ZIOAppDefault:
     yield ())
       .provide(
         serverConfig,
-        BalanceEndpointLayer.layer,
+        BalanceEndpointImpl.layer,
+        ContractEndpointImpl.layer,
         GnosisScanAccountsClient.layer,
+        GnosisScanContractsClient.layer,
         SlackClientLayer.layer,
         Client.default,
         Server.live

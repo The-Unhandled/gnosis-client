@@ -1,49 +1,45 @@
 package xyz.forsaken.gnosisclient
 package gnosisscan
 
-import gnosis.xDai
-import gnosisscan.GnosisScanClient.Module.Account
+import gnosisscan.GnosisScanClient.Module.Contract
 
 import com.github.plokhotnyuk.jsoniter_scala.core.*
-import com.github.plokhotnyuk.jsoniter_scala.macros.*
 import zio.*
 import zio.http.*
 
 import javax.naming.ConfigurationException
 
-final class GnosisScanAccountsClient(
+final class GnosisScanContractsClient(
     val config: GnosisScanConfig,
     httpClient: Client
 ) extends GnosisScanClient
-    with AccountsClient:
+    with ContractsClient:
 
-  final val module = Account
+  final val module = Contract
 
-  override def getxDaiBalance(address: String): Task[xDai] =
+  override def getAbi(address: String): Task[String] =
 
     // FIXME:
     val url: URL = URL
       .fromURI(config.url)
       .getOrElse(throw new ConfigurationException("Invalid URL"))
-      .queryParams(
-        queryParams("balance") ++ QueryParams("address" -> address)
-      )
+      .queryParams(queryParams("getabi") ++ QueryParams("address" -> address))
 
     (for
       response <- httpClient.url(url).get("/")
       responseBody <- response.body.asString
-      xDai <- ZIO
+      abi <- ZIO
         .attempt(
           readFromString[ResponseBody](responseBody)
         )
-        .map(x => xDai.fromWei(BigDecimal(x.result)))
-    yield xDai).provideSomeLayer(Scope.default)
+        .map(_.result)
+    yield abi).provideSomeLayer(Scope.default)
 
-object GnosisScanAccountsClient:
-  val layer: ZLayer[Client, Config.Error, GnosisScanAccountsClient] =
+object GnosisScanContractsClient:
+  val layer: ZLayer[Client, Config.Error, GnosisScanContractsClient] =
     ZLayer {
       for
         config <- ZIO.config(GnosisScanConfig.config)
         client <- ZIO.service[Client]
-      yield GnosisScanAccountsClient(config, client)
+      yield GnosisScanContractsClient(config, client)
     }

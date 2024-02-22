@@ -17,9 +17,10 @@ libraryDependencies ++= Seq(
   "dev.zio" %% "zio-config-typesafe" % zioConfigVersion,
   "dev.zio" %% "zio-config-magnolia" % zioConfigVersion,
   "dev.zio" %% "zio-config" % zioConfigVersion,
-  "dev.zio" %% "zio-logging" % "2.2.0",
-  "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-core"   % "2.28.2",
+  "dev.zio" %% "zio-logging" % "2.2.1",
+  "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-core" % "2.28.2",
   "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-macros" % "2.28.2" % Provided,
+  "org.bouncycastle" % "bcprov-jdk18on" % "1.77",
   /*"io.grpc" % "grpc-netty" % "1.50.1",
   "com.thesamet.scalapb" %% "scalapb-runtime-grpc" % scalapb.compiler.Version.scalapbVersion,*/
 

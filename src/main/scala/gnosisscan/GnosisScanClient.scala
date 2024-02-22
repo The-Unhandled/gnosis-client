@@ -31,11 +31,21 @@ trait GnosisScanClient:
   object ResponseBody:
     given codec: JsonValueCodec[ResponseBody] = JsonCodecMaker.make
 
+  final case class JsonRpcResponseBody(
+      jsonrpc: String,
+      result: String,
+      id: Int
+  )
+
+  object JsonRpcResponseBody:
+    given codec: JsonValueCodec[JsonRpcResponseBody] = JsonCodecMaker.make
+
 object GnosisScanClient:
 
   enum Module:
-    case Account, Contract
+    case Account, Contract, Proxy
 
     override def toString: String = this match
       case Account  => "account"
       case Contract => "contract"
+      case Proxy    => "proxy"

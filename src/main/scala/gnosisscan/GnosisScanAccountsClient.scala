@@ -17,7 +17,7 @@ final class GnosisScanAccountsClient(
 ) extends GnosisScanClient
     with AccountsClient:
 
-  final val module = Account
+  final protected val module = Account
 
   override def getxDaiBalance(address: String): Task[xDai] =
 

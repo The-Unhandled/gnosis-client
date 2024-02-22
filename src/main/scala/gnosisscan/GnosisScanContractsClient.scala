@@ -15,7 +15,7 @@ final class GnosisScanContractsClient(
 ) extends GnosisScanClient
     with ContractsClient:
 
-  final val module = Contract
+  final protected val module = Contract
 
   override def getAbi(address: String): Task[String] =
 

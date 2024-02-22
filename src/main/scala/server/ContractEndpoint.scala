@@ -1,6 +1,7 @@
 package xyz.forsaken.gnosisclient
-package gnosisscan
+package server
 
+import gnosisscan.ContractsClient
 import slack.SlackClient
 
 import zio.ZLayer

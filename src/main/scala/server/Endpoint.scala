@@ -1,5 +1,5 @@
 package xyz.forsaken.gnosisclient
-package gnosisscan
+package server
 
 import zio.http.Routes
 

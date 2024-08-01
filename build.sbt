@@ -2,8 +2,9 @@ version := "0.1.0-SNAPSHOT"
 
 scalaVersion := "3.3.1"
 
-lazy val zioVersion = "2.1-RC1"
-lazy val zioConfigVersion = "4.0.1"
+lazy val zioVersion = "2.1.6"
+lazy val zioConfigVersion = "4.0.2"
+lazy val http4sVersion = "1.0.0-M40"
 
 // ZIO GRPC
 /*PB.targets in Compile := Seq(
@@ -17,7 +18,7 @@ libraryDependencies ++= Seq(
   "dev.zio" %% "zio-config-typesafe" % zioConfigVersion,
   "dev.zio" %% "zio-config-magnolia" % zioConfigVersion,
   "dev.zio" %% "zio-config" % zioConfigVersion,
-  "dev.zio" %% "zio-logging" % "2.2.1",
+  "dev.zio" %% "zio-logging" % "2.3.0",
   "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-core" % "2.28.2",
   "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-macros" % "2.28.2" % Provided,
   "org.bouncycastle" % "bcprov-jdk18on" % "1.77",

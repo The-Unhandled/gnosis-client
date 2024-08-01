@@ -1,6 +1,7 @@
 package xyz.forsaken.gnosisclient
 
 import gnosisscan.*
+import blockscout.*
 import server.*
 import slack.SlackClientLayer
 
@@ -45,7 +46,8 @@ object MainApp extends ZIOAppDefault:
         serverConfig,
         BalanceEndpointImpl.layer,
         ContractEndpointImpl.layer,
-        GnosisScanAccountsClient.layer,
+        BlockscoutClient.layer,
+        // GnosisScanAccountsClient.layer,
         GnosisScanContractsClient.layer,
         GnosisScanGethProxyClient.layer,
         SlackClientLayer.layer,

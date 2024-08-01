@@ -1,5 +1,5 @@
 package xyz.forsaken.gnosisclient
-package gnosisscan
+package gnosis
 
 import gnosis.xDai
 

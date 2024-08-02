@@ -1,7 +1,7 @@
 package xyz.forsaken.gnosisclient
 
-import gnosisscan.*
 import blockscout.*
+import gnosisscan.*
 import server.*
 import slack.SlackClientLayer
 

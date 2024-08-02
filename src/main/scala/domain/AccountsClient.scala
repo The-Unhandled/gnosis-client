@@ -1,7 +1,7 @@
 package xyz.forsaken.gnosisclient
-package gnosis
+package domain
 
-import gnosis.xDai
+import domain.gnosis.xDai
 
 import zio.*
 

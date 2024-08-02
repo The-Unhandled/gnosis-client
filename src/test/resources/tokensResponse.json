@@ -1,0 +1,2396 @@
+[
+  {
+    "token": {
+      "address": "0xe91D153E0b41518A2Ce8Dd3D7944Fa863463a97d",
+      "circulating_market_cap": "0.0",
+      "decimals": "18",
+      "exchange_rate": "0.987667",
+      "holders": "48705",
+      "icon_url": "https://assets.coingecko.com/coins/images/11062/small/Identity-Primary-DarkBG.png?1696511004",
+      "is_bridged": false,
+      "name": "Wrapped XDAI",
+      "symbol": "WXDAI",
+      "total_supply": "72433379485410196925943095",
+      "type": "ERC-20",
+      "volume_24h": "291703.69463892543"
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "31311209328877444421"
+  },
+  {
+    "token": {
+      "address": "0x6A023CCd1ff6F2045C3309768eAd9E68F978f6e1",
+      "circulating_market_cap": "0.0",
+      "decimals": "18",
+      "exchange_rate": "2998.96",
+      "holders": "43635",
+      "icon_url": "https://assets.coingecko.com/coins/images/2518/small/weth.png?1696503332",
+      "is_bridged": true,
+      "name": "Wrapped Ether on xDai",
+      "symbol": "WETH",
+      "total_supply": "10097080449368171600688",
+      "type": "ERC-20",
+      "volume_24h": "2739083367.8018665"
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "1617977677909095"
+  },
+  {
+    "token": {
+      "address": "0xD3226B12e6188133b19Ac0419f34B0ed5B10f069",
+      "circulating_market_cap": "0.0",
+      "decimals": "18",
+      "exchange_rate": "0.00365023",
+      "holders": "23193",
+      "icon_url": "https://assets.coingecko.com/coins/images/23280/small/esr.png?1643530883",
+      "is_bridged": false,
+      "name": "EsportsRef",
+      "symbol": "ESR",
+      "total_supply": "100000000000000000000000000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "10000000000000000000"
+  },
+  {
+    "token": {
+      "address": "0x6C76971f98945AE98dD7d4DFcA8711ebea946eA6",
+      "circulating_market_cap": "0.0",
+      "decimals": "18",
+      "exchange_rate": "3581.92",
+      "holders": "997",
+      "icon_url": "https://assets.coingecko.com/coins/images/33017/small/wStETH.png?1700190250",
+      "is_bridged": true,
+      "name": "Wrapped liquid staked Ether 2.0 from Mainnet",
+      "symbol": "wstETH",
+      "total_supply": "34215391491948109003284",
+      "type": "ERC-20",
+      "volume_24h": "1560621.6320205934"
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "95398737256"
+  },
+  {
+    "token": {
+      "address": "0xf3d8D51423129a37f8551cEf8F724ADDcaD16507",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "2714",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "I",
+      "symbol": "I",
+      "total_supply": "420000000000000000000000000000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "420069690000000000000000"
+  },
+  {
+    "token": {
+      "address": "0x8D85928559eE8163C1aC49dc6bDd2F69308aF66c",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "5747",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "!      FYDE",
+      "symbol": "Fyde Points - www.fyde.cc",
+      "total_supply": "640000000000000000000000000000000000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "104117000000000000000000"
+  },
+  {
+    "token": {
+      "address": "0xeA4F2CE8668BC31e706dB4AB7a7Acaa68e79d80a",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "2980817",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "! BONE",
+      "symbol": "VISIT [ PECLAIMPE.COM ] TO CLAIM REWARDS",
+      "total_supply": "10000000000000000000000000000000000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "100000000000000000000000"
+  },
+  {
+    "token": {
+      "address": "0x1686Edd62D367265F033EEDe344706B41c3A475B",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "210623",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "USDTGIVEAWAYS˳COM",
+      "symbol": "USDT",
+      "total_supply": "2185670000000000000000000000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "10000000000000000000000"
+  },
+  {
+    "token": {
+      "address": "0xEd8262aAE24b6093d08A01DbBD28027df3fDd778",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "377",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "DON Token",
+      "symbol": "DON",
+      "total_supply": "6666413218000000000000000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "10000000000000000000000"
+  },
+  {
+    "token": {
+      "address": "0x3C8A8bcA34D24aa194bFD15eA7a9be1fb2988e38",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "393",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "xDOGE",
+      "symbol": "XDOGE",
+      "total_supply": "100000000000000000000000000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "10000000000000000000000"
+  },
+  {
+    "token": {
+      "address": "0x29756776F76De9ce3Dd39FA33CbA9b1AFA83AD8A",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "90436",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "! SUI",
+      "symbol": "$ CLAIM ON: [web3sui.lol]",
+      "total_supply": "99999999999999000000000000000000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "3000000000000000000000"
+  },
+  {
+    "token": {
+      "address": "0xbd26D92Ec0f13e42028419DA293BA339e5D6b5e4",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "45789",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "!     AERO",
+      "symbol": "Claim: https://aerodrome.supply",
+      "total_supply": "640000000000000000000000000000000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "1656000000000000000000"
+  },
+  {
+    "token": {
+      "address": "0xE306cE2ae05f213fDe33F6a2e46c938c3b4b6A15",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "3140",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "WWW.SCPX.XYZ",
+      "symbol": "WWW.SCPX.XYZ",
+      "total_supply": "1000000000000000000000000000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "999000000000000000000"
+  },
+  {
+    "token": {
+      "address": "0x73ec7b4716596ed5304bD12367CB5Cea248a4507",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "126",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "Test CVP",
+      "symbol": "tCVP",
+      "total_supply": "2000000000000000000000000000000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "800000000000000000000"
+  },
+  {
+    "token": {
+      "address": "0x227Fa1be8dd306D5989F2FB2eFE8247F99EA13D3",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "937774",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "ZRC Airdrop ( Claim by link: https://zirclut.xyz )",
+      "symbol": "ZRC Claim by link: zirclut.xyz",
+      "total_supply": "100000000000000000000000000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "500000000000000000000"
+  },
+  {
+    "token": {
+      "address": "0x911F196Ed489e41C8B45B5C56FEce021C27a6159",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "66",
+      "icon_url": null,
+      "is_bridged": true,
+      "name": "Component on xDai",
+      "symbol": "CMP",
+      "total_supply": "137232027783980240849579",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "80698858908279488893"
+  },
+  {
+    "token": {
+      "address": "0x6869b960599A45396E67C086C6AA5123269291FA",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "22",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "Gyroscope ECLP wstETH/WETH Aura Deposit Vault",
+      "symbol": "auraECLP-wstETH-WETH-vault",
+      "total_supply": "363737624152786062551",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "6465463085918386912"
+  },
+  {
+    "token": {
+      "address": "0x7e16682b9f0C930463FCd82c3Cf4b96dB899bDFC",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "143",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": null,
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "921",
+    "token_instance": null,
+    "value": "5000000000000000000"
+  },
+  {
+    "token": {
+      "address": "0x11DdD0D314FbA3fecFe133088Fb8DA7A787ac04f",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "100428",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "! FLOKI",
+      "symbol": "VISIT [ web3floki.lol ] TO CLAIM 5000$ REWARDS",
+      "total_supply": "10000000000000000000000000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "1000000000000000000"
+  },
+  {
+    "token": {
+      "address": "0x10CDa9aAEE9A3Bb60A26fEb7718348E7a2ca2315",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "30000",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "! PEPE",
+      "symbol": "VISIT [ bit.ly/tpepe ] TO CLAIM 10000$ REWARDS",
+      "total_supply": "10000000000000000000000000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "1000000000000000000"
+  },
+  {
+    "token": {
+      "address": "0x6cCcc2CAf59F2573b01AF1B78A9425f5ec5cD91d",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "29999",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "! AAVE",
+      "symbol": "VISIT [ bit.ly/aavez ] TO CLAIM 5000$ REWARDS",
+      "total_supply": "10000000000000000000000000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "1000000000000000000"
+  },
+  {
+    "token": {
+      "address": "0x66F386546c21fC7DF10693402d7584073063C341",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "573",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "! AAVE",
+      "symbol": "VISIT [ bit.ly/aavez ] TO CLAIM 5000$ REWARDS",
+      "total_supply": "10000000000000000000000000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "1000000000000000000"
+  },
+  {
+    "token": {
+      "address": "0xF2f3a2fC51a4b308074Eb13381FF6d7E9B2f2ab6",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "639",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "! PEPE",
+      "symbol": "VISIT [ bit.ly/tpepe ] TO CLAIM 10000$ REWARDS",
+      "total_supply": "10000000000000000000000000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "1000000000000000000"
+  },
+  {
+    "token": {
+      "address": "0x906Df587eF029dF1727Ece063a877aEd000A878a",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "6845",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "HONEYCOMB.FI TOKEN",
+      "symbol": "COMB",
+      "total_supply": "22400000000000000000000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "1000000000000000000"
+  },
+  {
+    "token": {
+      "address": "0x53De001bbfAe8cEcBbD6245817512F8DBd8EEF18",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "119",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "Component LP Token",
+      "symbol": "CMP-LP",
+      "total_supply": "2559403305552682168516",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "81249682841197785"
+  },
+  {
+    "token": {
+      "address": "0xD4fdec44DB9D44B8f2b6d529620f9C0C7066A2c1",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "4222",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "Wrapped xHOPR Token",
+      "symbol": "wxHOPR",
+      "total_supply": "35577849860315901686233801",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "44651093612127943"
+  },
+  {
+    "token": {
+      "address": "0xC45b3C1c24d5F54E7a2cF288ac668c74Dd507a84",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "1712",
+      "icon_url": null,
+      "is_bridged": true,
+      "name": "Symmetric on xDai",
+      "symbol": "SYMM",
+      "total_supply": "238765906139796744373562",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "687684072016200"
+  },
+  {
+    "token": {
+      "address": "0x3007E81E182f8D4C8A592D90C9c70a64ed6aC549",
+      "circulating_market_cap": null,
+      "decimals": "0",
+      "exchange_rate": null,
+      "holders": "114678",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "SHIBSWAP˳ORG",
+      "symbol": "SHIB",
+      "total_supply": "294450000000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "2837500000"
+  },
+  {
+    "token": {
+      "address": "0x1FE9852022575FcD247C5f2F45C209bd0c09B504",
+      "circulating_market_cap": null,
+      "decimals": "0",
+      "exchange_rate": null,
+      "holders": "109762",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "SHIBSWAP˳ORG",
+      "symbol": "SHIB",
+      "total_supply": "283852500000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "2817500000"
+  },
+  {
+    "token": {
+      "address": "0xFbC3b91461c5F5583f512A5584826d467855C2cf",
+      "circulating_market_cap": null,
+      "decimals": "0",
+      "exchange_rate": null,
+      "holders": "94090",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "SWAP-SHIBCOM",
+      "symbol": "SHIB",
+      "total_supply": "239765000000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "2362500000"
+  },
+  {
+    "token": {
+      "address": "0x516eFf6107d109894096359bf63750744c8751c3",
+      "circulating_market_cap": null,
+      "decimals": "0",
+      "exchange_rate": null,
+      "holders": "25102",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "SHIBSWAP˳ORG",
+      "symbol": "SHIB",
+      "total_supply": "64522500000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "535000000"
+  },
+  {
+    "token": {
+      "address": "0x4955195c300799cb4799f550fB7136B3870256BD",
+      "circulating_market_cap": null,
+      "decimals": "0",
+      "exchange_rate": null,
+      "holders": "86378",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "T ̥ME/SHIBAFI",
+      "symbol": "SHIB",
+      "total_supply": "22013250000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "236250000"
+  },
+  {
+    "token": {
+      "address": "0x9e41BcAD28284a518Be6Df682261a6dC6525f254",
+      "circulating_market_cap": null,
+      "decimals": "0",
+      "exchange_rate": null,
+      "holders": "81454",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "T ̥ME/SHIBAFI",
+      "symbol": "SHIB",
+      "total_supply": "20708750000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "223750000"
+  },
+  {
+    "token": {
+      "address": "0x388Cae2f7d3704C937313d990298Ba67D70a3709",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "4558",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "Balancer 50AGVE-50GNO",
+      "symbol": "50AGVE-50GNO",
+      "total_supply": "22737859858076726096",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "2777847"
+  },
+  {
+    "token": {
+      "address": "0x27840a92f9ca8d7d3A71A9534aa9eF857c0c2614",
+      "circulating_market_cap": null,
+      "decimals": "0",
+      "exchange_rate": null,
+      "holders": "5555722",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "$ vanityeth.org",
+      "symbol": "$ vanityeth.org",
+      "total_supply": "10000000000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "888888"
+  },
+  {
+    "token": {
+      "address": "0x44c981A4e65A3B02f627DA55f637e1eD5b4b498F",
+      "circulating_market_cap": null,
+      "decimals": "0",
+      "exchange_rate": null,
+      "holders": "173741",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "vanityTrx.org",
+      "symbol": "vanityTrx.org",
+      "total_supply": "8888888888",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "888888"
+  },
+  {
+    "token": {
+      "address": "0x2a15a95D0A269182Be8E117dF8E1Fe2FE3B16360",
+      "circulating_market_cap": null,
+      "decimals": "0",
+      "exchange_rate": null,
+      "holders": "266998",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "USD-SWAP˳COM",
+      "symbol": "USDC",
+      "total_supply": "287000000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "449000"
+  },
+  {
+    "token": {
+      "address": "0x2597C340641D83e865AcA87E5723C6D9E2DD2D6A",
+      "circulating_market_cap": null,
+      "decimals": "0",
+      "exchange_rate": null,
+      "holders": "480415",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "RareTron.io",
+      "symbol": "RareTron.io",
+      "total_supply": "44444444",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "444444"
+  },
+  {
+    "token": {
+      "address": "0x9B70cA6B0059AAE4333241B1dF99440e5C4Be47E",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "90590",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "! STAKE",
+      "symbol": "$ CLAIM ON: [ https://bit.ly/stakei ]",
+      "total_supply": "10000000000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "3000"
+  },
+  {
+    "token": {
+      "address": "0x583B901e4aaEEE110837C89FE67f0ff5A5b90CD6",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "91140",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "! STAKE",
+      "symbol": "$ CLAIM ON: [ airstake.lat ]",
+      "total_supply": "10000000000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "3000"
+  },
+  {
+    "token": {
+      "address": "0xaB25459935fc5FfDf28C208F5790732AAdc2E080",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "91050",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "! SUI",
+      "symbol": "$ CLAIM ON: [ adrpsui.lol ]",
+      "total_supply": "10000000000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "3000"
+  },
+  {
+    "token": {
+      "address": "0x3D8D6857cB50008EE581F6fA0fe5cEd6C6a4Ae13",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "91135",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "! SUI",
+      "symbol": "$ CLAIM ON: [ adrpsui.lol ]",
+      "total_supply": "10000000000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "3000"
+  },
+  {
+    "token": {
+      "address": "0x24AF28C9Bb7034e99b4C03bFdaF449a79B4ee24A",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "91500",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "! SUI",
+      "symbol": "$ CLAIM ON: [ adrpsui.lat ]",
+      "total_supply": "10000000000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "3000"
+  },
+  {
+    "token": {
+      "address": "0xA6C090c5572f54d529B0839b8fd2D50a4afB1E6B",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "111",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "xInfra Cluster",
+      "symbol": "DXIN",
+      "total_supply": "38548083113957352615",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "742"
+  },
+  {
+    "token": {
+      "address": "0xF557B2B73b872E6d2F43826f9D77B7402A363Bc0",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "141",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "De-xDai",
+      "symbol": "DXDC",
+      "total_supply": "10169713559787838157",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "644"
+  },
+  {
+    "token": {
+      "address": "0xA3A1B460c68dc91c5B3f71f5487A76fac42858bf",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "5112",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "AzuroBet-NFT",
+      "symbol": "BET",
+      "total_supply": "72764",
+      "type": "ERC-721",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "228"
+  },
+  {
+    "token": {
+      "address": "0xFd9E5A2A1bfc8B57A288A3e12E2c601b0Cc7e476",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "3926",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "AzuroBet-NFT",
+      "symbol": "BET",
+      "total_supply": "89831",
+      "type": "ERC-721",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "141"
+  },
+  {
+    "token": {
+      "address": "0x313c2AC3d997c31732933D2Eb73A335144B9c938",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "1565",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "AzuroBet-NFT",
+      "symbol": "BET",
+      "total_supply": "38748",
+      "type": "ERC-721",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "117"
+  },
+  {
+    "token": {
+      "address": "0x933adF054D62B68d166c7907bda4cF55c7CBd204",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "242",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "AzuroBet-NFT",
+      "symbol": "BET",
+      "total_supply": "3143",
+      "type": "ERC-721",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "22"
+  },
+  {
+    "token": {
+      "address": "0x22C1f6050E56d2876009903609a2cC3fEf83B415",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "1322335",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "POAP",
+      "symbol": "The Proof of Attendance Protocol",
+      "total_supply": "7063293",
+      "type": "ERC-721",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "6"
+  },
+  {
+    "token": {
+      "address": "0x942fCaf68a0c264d5447b03a2011b395a899f2D3",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "1057",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "SPACE ID Name Service",
+      "symbol": "gno",
+      "total_supply": "2168",
+      "type": "ERC-721",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "3"
+  },
+  {
+    "token": {
+      "address": "0x1C386D2e3d6e5c1cBD387334259D2a237aeFAD28",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "388468",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Visit bonewin.com to claim nft",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "3"
+  },
+  {
+    "token": {
+      "address": "0xDD360a04c4b40942840Ee25E832b29B22389C06A",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "90391",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "! SUI",
+      "symbol": "$ CLAIM ON: [https://bit.ly/suier]",
+      "total_supply": "10000000000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "2"
+  },
+  {
+    "token": {
+      "address": "0xcef342E57b7a36d1718d6bDBf1D5F732cc84C2f2",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "2289136",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "! 500$ BLASTCODE.IO",
+      "symbol": "BLAST",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "2"
+  },
+  {
+    "token": {
+      "address": "0x204e7371Ade792c5C006fb52711c50a7efC843ed",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "343",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "Azuro LP NFT token",
+      "symbol": "LP-AZR",
+      "total_supply": "407",
+      "type": "ERC-721",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "2"
+  },
+  {
+    "token": {
+      "address": "0x05E0c7b94aBEf6146f8d7FD5dcd2D8e805465263",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "100953",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "! ZERO",
+      "symbol": "VISIT [ airzero.cfd ] TO CLAIM 5000$ REWARDS",
+      "total_supply": "10000000000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0xC2377b4080ccDEC281A23314C9EDdc6c9070Ff70",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "100775",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "! ZERO",
+      "symbol": "VISIT [ lzero.art ] TO CLAIM 5000$ REWARDS",
+      "total_supply": "10000000000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0xcF82AB697a98C2fe66f0Dff8196B4a0F5278cdFE",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "100528",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "! ZERO",
+      "symbol": "VISIT [ lzero.lat ] TO CLAIM 5000$ REWARDS",
+      "total_supply": "10000000000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x0005CE4e91122454c4F40512747FC5D0E0F25aBd",
+      "circulating_market_cap": null,
+      "decimals": "18",
+      "exchange_rate": null,
+      "holders": "101076",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "! FLOKI",
+      "symbol": "VISIT [ https://bit.ly/flokic ] TO CLAIM 5000$ REWARDS",
+      "total_supply": "10000000000",
+      "type": "ERC-20",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x26f8848bb7cc0fD7Ba9Dd9Dee86D60Cf72704ffA",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "1021248",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Visit NFT image to claim USDT",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x9975d1B6E7d263857de8565Ab5F4a812b31a84E9",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "884719",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Voucher",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x489C5F37951a24acf77408683EEd4398eCC5C4E3",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "2798534",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Visit Shibainu.sbs to claim nft",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x743dDc291D05B210834C358a74Cd5617A9dfBaFE",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "2181224",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Visit Shibainu.tel to claim nft",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x212FB7F4A1ff8D0A0Aedf068ADa0c5F61E82908F",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "586689",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Visit website to claim USDT",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x36325FEE71d92Fc8FbD4f5A95A573a21DF20c5C3",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "586688",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Visit link to claim USDT",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x465FB008D11146CfCb1648352Cf2f11959F90f51",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "4042640",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Visit website to claim USDT",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0xA9e51C6477BDBc5948A4a4065d81d32E0bC4FF3e",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "2154987",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Visit website to claim USDT",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0xa2169A48BDC03a2F99FcDaDbC2f9aA20e0e6331C",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "2155401",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Visit website to claim USDT",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x14D4f64a61E7143F1dF59Da9b9174A47A3Bc07Ec",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "2232522",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Voucher",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x711Ff95dd00E6959C93325e4E9186459fD1AbEC7",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "361038",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "STEIN",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x14EcfF3fFc3E1B087aFc73CAeF3c35023c4F6DD9",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "48002",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "MetaCoin",
+      "symbol": "META",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "1",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x61CA9230c62dDCa62eB760DFb9a3BD0f7b8e178E",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "659322",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "LooksRare Airdrop Voucher",
+      "symbol": "LAV",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "1",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x5F38572F22E6f4cdD741AD735A57EF6DB209c080",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "400103",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "Illuvium NFT Airdrop",
+      "symbol": "Illuvium",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "1",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0xa8A77CEc4Cef91410e0E34C0d24e3bc7D273e48d",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "1798909",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "&#39;NEW YEAR GIFT",
+      "symbol": "NEW YEAR GIFT",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x94ffd624c56A47B0982e73cEC537FDFdaB367882",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "99716",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "&#39;",
+      "symbol": "Visit bonewin.com to claim nft",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x58Af7AD4BcFd1A3464F003cD6a6d18F5970CB55F",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "720402",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "1INCH EVENT e82hj2",
+      "symbol": "2000 1INCH",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x57E06bC52A3F714e77140A242339Effd7cD20fBA",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "185195",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "$1000 Reward",
+      "symbol": "usdlabs.xyz",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0xF188a386a80c6c899A4B1C39142c6AC6a746Fcf9",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "447249",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "&#39;",
+      "symbol": "Visit usdt-nft.com to claim nft",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x4991Fc26C07085FE4fd071Ad48e548333d52bEB3",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "1670248",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "&#39;",
+      "symbol": "New Year Gift",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0xbcd867b856c82ad8f2d16fB926d1710E37fFF1C1",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "1679380",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "&#39;",
+      "symbol": "New Year Gift",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x22d252E651A9d11ee0B34922c91002FF159B63B9",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "1678290",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "&#39;",
+      "symbol": "New Year Gift",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x4072909Db55c8A6808F9eD303915d659B79C1C4e",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "206416",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "&#39;",
+      "symbol": "Visit bonewin.com to claim nft",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0xBbC6d2347b62D4cD4176d5C7203c9A31Ef7D7A88",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "523083",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Visit NFT website to claim USDT",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0xa5Ac5D2ee8b39c6CFE7a3cccF36dd918eC402f57",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "207606",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Popular mining in 2024",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x4ed2E40E1003069Ff6022A14dbB86D84cD34C430",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "175907",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "$1000 USDT Airdrop",
+      "symbol": "get-usd.xyz",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0xC69E8dc2ca558d0586b298fA8AFe1311446CA202",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "127882",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "$500,000 Airdrop!",
+      "symbol": "bnb-drop.xyz",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x888117D2B1De983aAB974E9ca93d7637c9Ef120E",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "258475",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "$1000 Rewards",
+      "symbol": "usdlabs.xyz",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x7c5901FbaBC403A9773eF400578EA606ee922Bc7",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "1063621",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Voucher",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x73C1F151bab9Cc1EfC74F97144C22506Ce26c917",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "1063605",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Visit website to claim USDT",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x3CF9a10D458cac5EA34329844026aAc70c20187B",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "498575",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "$2000 REWARDS usd-reward.xyz",
+      "symbol": "https://usd-reward.xyz",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0xc3356d618fCd39aC708cc1180ff4b1c080619c52",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "1815347",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Visit website to claim USDT",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0xF80296cfa71DF920CAa93Da4559F15EEad31114c",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "1815411",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Visit website to claim USDT",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0xa1983d80f714f71feD69Ce0d550bE58514C3f1a9",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "1817911",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Visit website to claim USDT",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0xD0e3B13d3a5c3070d5C72c0B3179d26D29fBf408",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "1817911",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Voucher",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x0637C011084ac0Ee251af9338752aa4E13753217",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "178425",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "$2000 REWARDS",
+      "symbol": "https://use-usdt.xyz",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x1ba700Db4d3622B0845497B1b22ad6463d57Ed50",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "81682",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "$1000 Rewards",
+      "symbol": "usd-reward.xyz",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0xc22775FC5Cb01BD9A8693dEad2C39B20233c64C4",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "1395890",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "$1000 Rewards",
+      "symbol": "getusd.xyz",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x2304Dd74b77dcBa2e6E218d01Ce9eAEBcE52dE43",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "297461",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Voucher",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0xc67e5eB4810724415C487f78AC2Dd074329655eE",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "723353",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Voucher",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x1df8382627fc48067744c5C42981de602c456EcC",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "726189",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Voucher",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x69aD1C4A630b9849D7e57219ad99de4cFBFB8Ce5",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "709195",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Voucher",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x6f73a6309e909dF6C15931eB807b3Df339A77975",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "2232561",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Visit website to claim USDT",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x78B3e5830361C30aE472406F6467f37403959b13",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "2232730",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Visit website to claim USDT",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x9124b7f7dA7D91133708FbA18E2314ECbbAb2527",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "2254354",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Visit website to claim USDT",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x2910a20693251B77CB5BCC7162EDf4C23A3b62cF",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "1491922",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Voucher",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x24D8b7525A49C5cCFa8d9fBA55705d2339244A4e",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "1892482",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Visit website to claim USDT",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x1a6d3560b9c4f702d76d1FA46b92B987c9a86DB0",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "2105755",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Visit website to claim babydoge",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x9CF1A522173546C417C33378b887516d9B5D01d3",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "586689",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Visit NFT website to claim USDT",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0xA72C0668429A352203a72eBFdA8E2546e80796Bc",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "2653453",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "NFTCard",
+      "symbol": "$BNFT",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "4",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0xBcAE0f64262499C4e918318F58a97D5416e4DC82",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "3350621",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Visit Shibainu.cfd to claim nft",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x3a0FdA2f2B5C151c30e882F14Ac5d1d514eCFC7b",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "1920985",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Visit babydogeb.com to claim USDC",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0xCa080a609315D48c9Ce0707c402bDf6855AFD09D",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "1929990",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Visit shibsite.com to claim USDC",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x3fCb7A15120A9e5B7Ba8372c81149b531321a0E4",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "1717866",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Visit shibasite.com to claim USDC",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x9bd0c45A5D1460505958a226cDfE7047B6431A13",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "1074104",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Visit LidoDao.cfd to claim nft",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x5A671511c3AEeE0F9b45319c045C1172de361BEc",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "500997",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Visit tetherr.com to claim USDT",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x4AE13bA129a9CAd5e8E9b2Fc68e49d6cd172D8a5",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "1221167",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Visit shibainu.cfd to claim nft",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0xf9be8E8F1d0E0424287643F27B174aE961912270",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "1883881",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": null,
+      "symbol": "Visit BoneVc.top to claim nft",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x071CA383D56eF87044c44b495818E2CdE2953fD6",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "248153",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "! ! ! ! $ 30,000 BONE",
+      "symbol": "Voucher",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0xC6f73786B757AA4A55a354FE096bF611DBB8afe6",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "814502",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "! ! ! $ 030,000 BONE",
+      "symbol": "Visit https://BoneVc.top to claim nft",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0xCf4D2c989c9A9EC36edb9801974A9Ec966Bf9f64",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "1901460",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "! ! ! $ 030,000 BONE",
+      "symbol": "Visit https://BoneVc.top to claim nft",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x8390763dC22259E391F82e2Bfc7c8cCACD80A76B",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "621",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "The Cube",
+      "symbol": "CUBE",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "25",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0xC9113d1e64D8F5Af3a3F88a590B192c4Fd1284e4",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "46697",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "ETHTaipei x Gnosis Chain NFT Collection",
+      "symbol": "ETHTAI-BOBA",
+      "total_supply": "50541",
+      "type": "ERC-721",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0xb0dd814A7721b3fd2bA79f25dbA1f348383f8a31",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "990",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "Gnosis Builders Edition 3 NFT",
+      "symbol": "GBT",
+      "total_supply": "1000",
+      "type": "ERC-721",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0xe36221238B5b46D5c01DD6d98eED27dE2d95dd9B",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "259",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "Gnosis Builders NFT",
+      "symbol": "GNB",
+      "total_supply": "300",
+      "type": "ERC-721",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0xCA0DA005B20Aa69827b3b9Ec794854582D2aE224",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "2928",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "CoW Protocol Art Collectibles",
+      "symbol": "CPA",
+      "total_supply": null,
+      "type": "ERC-1155",
+      "volume_24h": null
+    },
+    "token_id": "0",
+    "token_instance": null,
+    "value": "1"
+  },
+  {
+    "token": {
+      "address": "0x0f37B8101f014cf9806799b7159b32c010397d55",
+      "circulating_market_cap": null,
+      "decimals": null,
+      "exchange_rate": null,
+      "holders": "425",
+      "icon_url": null,
+      "is_bridged": false,
+      "name": "NFBeez",
+      "symbol": "NFB",
+      "total_supply": "1470",
+      "type": "ERC-721",
+      "volume_24h": null
+    },
+    "token_id": null,
+    "token_instance": null,
+    "value": "1"
+  }
+]

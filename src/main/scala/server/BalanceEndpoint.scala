@@ -1,14 +1,12 @@
 package xyz.forsaken.gnosisclient
 package server
 
+import domain.*
+import gnosisscan.GethProxyClient
 import slack.SlackClient
-import xyz.forsaken.gnosisclient.gnosis.AccountsClient
 
-import xyz.forsaken.gnosisclient.gnosis.Tokens.ERC20Token
-import xyz.forsaken.gnosisclient.gnosisscan.GethProxyClient
 import zio.ZLayer
 import zio.http.*
-import xyz.forsaken.gnosisclient.gnosis.Tokens.*
 
 trait BalanceEndpoint extends Endpoint:
   override def routes: Routes[Any, Throwable] = Routes(xdaiBalanceRoute)
@@ -17,6 +15,7 @@ trait BalanceEndpoint extends Endpoint:
 
 final class BalanceEndpointImpl(
     accountsClient: AccountsClient,
+    tokensClient: TokensClient,
     gethProxyClient: GethProxyClient,
     slackClient: SlackClient
 ) extends BalanceEndpoint:
@@ -26,13 +25,15 @@ final class BalanceEndpointImpl(
       (address: String, req: Request) =>
         for
           xDaiBalance <- accountsClient.getxDaiBalance(address)
+          tokensBalance <- tokensClient.getTokenBalances(address)
           //sDaiBalance <- gethProxyClient.getBalance(SDAI, address)
           //wxDaiBalance <- gethProxyClient.getBalance(WXDAI, address)
           //message = s"Your balance is: $xDaiBalance xDai, $sDaiBalance sDai, $wxDaiBalance wxDai"
-          message = s"Your balance is: $xDaiBalance xDai"
+          tokensBalanceMessage = tokensBalance.map(tb => s"${tb.token.symbol}: ${tb.balance}").mkString(", ")
+          message = s"Your balance is: $xDaiBalance xDai\n$tokensBalanceMessage"
           _ <- slackClient.notify(message)
         yield Response.text(message)
     }
 
 object BalanceEndpointImpl:
-  val layer = ZLayer.fromFunction(BalanceEndpointImpl(_, _, _))
+  val layer = ZLayer.fromFunction(BalanceEndpointImpl(_, _, _, _))

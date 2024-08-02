@@ -1,9 +1,9 @@
 package xyz.forsaken.gnosisclient
 package gnosisscan
 
-import gnosis.xDai
+import domain.Tokens.ERC20Token
+import domain.gnosis.xDai
 
-import xyz.forsaken.gnosisclient.gnosis.Tokens.ERC20Token
 import zio.Task
 
 /**

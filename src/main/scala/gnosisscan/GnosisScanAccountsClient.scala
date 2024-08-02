@@ -1,7 +1,8 @@
 package xyz.forsaken.gnosisclient
 package gnosisscan
 
-import gnosis.{AccountsClient, xDai}
+import domain.AccountsClient
+import domain.gnosis.xDai
 import gnosisscan.GnosisScanClient.Module.Account
 
 import com.github.plokhotnyuk.jsoniter_scala.core.*

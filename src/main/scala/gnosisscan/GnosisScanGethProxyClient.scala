@@ -1,8 +1,8 @@
 package xyz.forsaken.gnosisclient
 package gnosisscan
 
-import gnosis.Tokens.ERC20Token
-import gnosis.xDai
+import domain.Tokens.ERC20Token
+import domain.gnosis.xDai
 import gnosisscan.GnosisScanClient.Module.Proxy
 
 import com.github.plokhotnyuk.jsoniter_scala.core.*

@@ -1,9 +1,9 @@
 package xyz.forsaken.gnosisclient
 package blockscout
 
+import domain.*
 import domain.Tokens.ERC20Token
 import domain.gnosis.xDai
-import domain.*
 
 import com.github.plokhotnyuk.jsoniter_scala.core.*
 import com.github.plokhotnyuk.jsoniter_scala.macros.*

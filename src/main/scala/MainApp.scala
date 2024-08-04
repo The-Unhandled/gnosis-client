@@ -1,5 +1,6 @@
 package xyz.forsaken.gnosisclient
 
+import beaconcha.*
 import blockscout.*
 import gnosisscan.*
 import server.*
@@ -35,10 +36,11 @@ object MainApp extends ZIOAppDefault:
   def run =
     (for
       balanceEndpoint <- ZIO.service[BalanceEndpoint]
-      contractEndpoint <- ZIO.service[ContractsEndpoint]
+      contractEndpoint <- ZIO.service[ContractEndpoint]
+      validatorEndpoint <- ZIO.service[ValidatorEndpoint]
       routes = Routes(
         textRoute
-      ) ++ balanceEndpoint.routes ++ contractEndpoint.routes
+      ) ++ balanceEndpoint.routes ++ contractEndpoint.routes ++ validatorEndpoint.routes
       app = routes.handleError(errorHandler).toHttpApp
       port <- Server.serve(app) *> ZIO.logInfo(s"Started server")
     yield ())
@@ -46,7 +48,9 @@ object MainApp extends ZIOAppDefault:
         serverConfig,
         BalanceEndpointImpl.layer,
         ContractEndpointImpl.layer,
+        ValidatorEndpointImpl.layer,
         BlockscoutClient.layer,
+        BeaconchaClient.layer,
         // GnosisScanAccountsClient.layer,
         GnosisScanContractsClient.layer,
         GnosisScanGethProxyClient.layer,

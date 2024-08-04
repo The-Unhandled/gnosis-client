@@ -7,7 +7,7 @@ import slack.SlackClient
 import zio.ZLayer
 import zio.http.*
 
-trait ContractsEndpoint extends Endpoint:
+trait ContractEndpoint extends Endpoint:
   override def routes: Routes[Any, Throwable] = Routes(getAbiRoute)
 
   def getAbiRoute: Route[Any, Throwable]
@@ -15,7 +15,7 @@ trait ContractsEndpoint extends Endpoint:
 final class ContractEndpointImpl(
     contractsClient: ContractsClient,
     slackClient: SlackClient
-) extends ContractsEndpoint:
+) extends ContractEndpoint:
 
   def getAbiRoute: Route[Any, Throwable] =
     Method.GET / "contract" / string("address") -> handler {

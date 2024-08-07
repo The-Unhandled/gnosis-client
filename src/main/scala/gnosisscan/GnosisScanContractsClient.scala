@@ -23,7 +23,7 @@ final class GnosisScanContractsClient(
     val url: URL = URL
       .fromURI(config.url)
       .getOrElse(throw new ConfigurationException("Invalid URL"))
-      .queryParams(queryParams("getabi") ++ QueryParams("address" -> address))
+      .addQueryParams(queryParams("getabi") ++ QueryParams("address" -> address))
 
     (for
       response <- httpClient.url(url).get("/")

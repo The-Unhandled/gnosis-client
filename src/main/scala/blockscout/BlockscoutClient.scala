@@ -35,7 +35,7 @@ final class BlockscoutClient(
       .getOrElse(throw new ConfigurationException("Invalid URL"))
       ./("addresses")
       ./(address)
-      .queryParams(QueryParams("apikey" -> config.apiKey))
+      .addQueryParams(QueryParams("apikey" -> config.apiKey))
 
     (for
       response <- httpClient.url(url).get("/")
@@ -55,7 +55,7 @@ final class BlockscoutClient(
       ./("addresses")
       ./(address)
       ./("token-balances")
-      .queryParams(QueryParams("apikey" -> config.apiKey))
+      .addQueryParams(QueryParams("apikey" -> config.apiKey))
 
     (for
       response <- httpClient.url(url).get("/")

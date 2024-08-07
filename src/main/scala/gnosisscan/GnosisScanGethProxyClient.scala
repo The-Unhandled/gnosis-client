@@ -25,7 +25,7 @@ final class GnosisScanGethProxyClient(
     val url: URL = URL
       .fromURI(config.url)
       .getOrElse(throw new ConfigurationException("Invalid URL"))
-      .queryParams(
+      .addQueryParams(
         queryParams("eth_call") ++ QueryParams(
           "to" -> erc20Token.address
         ) ++ QueryParams("data" -> address)
@@ -38,7 +38,7 @@ final class GnosisScanGethProxyClient(
       responseBody <- response.body.asString
       _ = println(s"Got Response: $response")
       _ = println(s"The Body: $responseBody")
-      _ = ZIO.logInfo(s"ZIO Got Response: $response")
+      _ <- ZIO.logInfo(s"ZIO Got Response: $response")
       wxDai <- ZIO
         .attempt(
           readFromString[JsonRpcResponseBody](responseBody)

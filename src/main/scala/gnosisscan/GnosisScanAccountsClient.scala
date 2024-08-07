@@ -26,7 +26,7 @@ final class GnosisScanAccountsClient(
     val url: URL = URL
       .fromURI(config.url)
       .getOrElse(throw new ConfigurationException("Invalid URL"))
-      .queryParams(
+      .addQueryParams(
         queryParams("balance") ++ QueryParams("address" -> address)
       )
 

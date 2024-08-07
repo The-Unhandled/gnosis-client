@@ -28,7 +28,7 @@ final class BeaconchaClient(
       .getOrElse(throw new ConfigurationException("Invalid URL"))
       ./("validator")
       ./(validators.mkString(","))
-      .queryParams(QueryParams("apikey" -> config.apiKey))
+      .addQueryParams(QueryParams("apikey" -> config.apiKey))
 
     (for
       response <- httpClient.url(url).get("")

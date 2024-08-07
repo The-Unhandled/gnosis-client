@@ -17,21 +17,27 @@ import zio.logging.consoleLogger
 object MainApp extends ZIOAppDefault:
 
   override val bootstrap: ZLayer[ZIOAppArgs, Any, Any] =
-    Runtime.setConfigProvider(
+    Runtime.removeDefaultLoggers >>> Runtime.setConfigProvider(
       TypesafeConfigProvider
         .fromResourcePath()
-    ) ++ Runtime.removeDefaultLoggers >>> consoleLogger()
+    ) >>> consoleLogger()
 
   private val textRoute =
     Method.GET / "hello" -> handler(Response.text("Hello World!"))
 
   private val serverConfig: Layer[Config.Error, Server.Config] =
     ZLayer.fromZIO(ZIO.config[ServerConfig](ServerConfig.config).map { c =>
-      Server.Config.default.port(c.port)
+      Server.Config.default
+        .idleTimeout(30.seconds)
+        .port(c.port)
     })
 
-  private def errorHandler: Throwable => Response =
-    e => Response.text(e.getMessage).status(Status.InternalServerError)
+  private def errorHandler: Throwable => UIO[Response] =
+    e =>
+      for {
+        _ <- ZIO.logErrorCause("Error", Cause.fail(e))
+        response = Response.text("OOPS").status(Status.InternalServerError)
+      } yield response
 
   def run =
     (for
@@ -41,8 +47,10 @@ object MainApp extends ZIOAppDefault:
       routes = Routes(
         textRoute
       ) ++ balanceEndpoint.routes ++ contractEndpoint.routes ++ validatorEndpoint.routes
-      app = routes.handleError(errorHandler).toHttpApp
-      port <- Server.serve(app) *> ZIO.logInfo(s"Started server")
+      routesWithoutError: Routes[Any, Response] = routes.handleErrorZIO(
+        errorHandler
+      )
+      _ <- Server.serve(routesWithoutError)
     yield ())
       .provide(
         serverConfig,

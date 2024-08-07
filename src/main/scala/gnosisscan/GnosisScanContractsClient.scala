@@ -3,11 +3,8 @@ package gnosisscan
 
 import gnosisscan.GnosisScanClient.Module.Contract
 
-import com.github.plokhotnyuk.jsoniter_scala.core.*
 import zio.*
 import zio.http.*
-
-import javax.naming.ConfigurationException
 
 final class GnosisScanContractsClient(
     val config: GnosisScanConfig,

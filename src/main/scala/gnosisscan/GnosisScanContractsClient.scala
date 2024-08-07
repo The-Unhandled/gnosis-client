@@ -18,22 +18,13 @@ final class GnosisScanContractsClient(
   final protected val module = Contract
 
   override def getAbi(address: String): Task[String] =
-
-    // FIXME:
-    val url: URL = URL
-      .fromURI(config.url)
-      .getOrElse(throw new ConfigurationException("Invalid URL"))
-      .addQueryParams(queryParams("getabi") ++ QueryParams("address" -> address))
-
     (for
-      response <- httpClient.url(url).get("/")
-      responseBody <- response.body.asString
-      abi <- ZIO
-        .attempt(
-          readFromString[ResponseBody](responseBody)
-        )
+      url <- getUrl("getabi")
+      createurl = url
+        .addQueryParams(QueryParams("address" -> address))
+      abi <- request[ResponseBody](createurl)
         .map(_.result)
-    yield abi).provideSomeLayer(Scope.default)
+    yield abi).provide(ZLayer.succeed(httpClient), Scope.default)
 
 object GnosisScanContractsClient:
   val layer: ZLayer[Client, Config.Error, GnosisScanContractsClient] =

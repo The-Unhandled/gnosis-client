@@ -4,6 +4,7 @@ package beaconcha
 import domain.*
 import domain.Tokens.ERC20Token
 import domain.gnosis.xDai
+import infra.CommonHttpClient
 import validators.*
 
 import com.github.plokhotnyuk.jsoniter_scala.core.*
@@ -17,39 +18,39 @@ final class BeaconchaClient(
     val config: BeaconchaConfig,
     httpClient: Client,
     validators: Set[Int]
-) extends ValidatorsClient:
+) extends CommonHttpClient
+    with ValidatorsClient:
 
   import BeaconchaClient.*
 
-  override def getValidators: Task[Set[Validator]] =
-    // FIXME:
-    val url: URL = URL
-      .fromURI(config.url)
-      .getOrElse(throw new ConfigurationException("Invalid URL"))
-      ./("validator")
-      ./(validators.mkString(","))
-      .addQueryParams(QueryParams("apikey" -> config.apiKey))
+  final val uri = config.url
+  final val apiKey = config.apiKey
 
+  override def getValidators: Task[Set[Validator]] =
     (for
-      response <- httpClient.url(url).get("")
-      responseBody <- response.body.asString
-      beaconchaResponse <- ZIO
-        .attempt(
-          readFromString[BeaconchaResponse](responseBody)
-        )
-      validators = beaconchaResponse.data.map(_.toValidator)
-    yield validators).provideSomeLayer(Scope.default)
+      url <- getUrl
+      createurl = url
+        ./("validator")
+        ./(validators.mkString(","))
+      response <- request[BeaconchaResponse](createurl)
+      validators = response.data.map(_.toValidator)
+    yield validators).provide(ZLayer.succeed(httpClient), Scope.default)
 
 object BeaconchaClient:
 
-  case class ValidatorResponse(validatorindex: Long, balance: Long, status: String, pubkey: String):
+  case class ValidatorResponse(
+      validatorindex: Long,
+      balance: Long,
+      status: String,
+      pubkey: String
+  ):
     def toValidator: Validator = Validator(
       index = validatorindex,
       balance = balance,
       status = status,
       address = pubkey
     )
-    
+
   case class BeaconchaResponse(status: String, data: Set[ValidatorResponse])
 
   object BeaconchaResponse:

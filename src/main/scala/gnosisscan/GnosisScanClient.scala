@@ -1,26 +1,37 @@
 package xyz.forsaken.gnosisclient
 package gnosisscan
 
+import infra.CommonHttpClient
+
 import com.github.plokhotnyuk.jsoniter_scala.core.*
 import com.github.plokhotnyuk.jsoniter_scala.macros.*
+import zio.Task
 import zio.http.*
 
 /** @author
   *   Petros Siatos
   */
-trait GnosisScanClient:
-
+trait GnosisScanClient extends CommonHttpClient:
+  
   import GnosisScanClient.*
 
   protected val module: Module
   protected val config: GnosisScanConfig
+  
+  final val uri = config.url
+  final val apiKey = config.apiKey
 
-  protected def queryParams(action: String) = QueryParams(
+  private def queryParams(action: String) = QueryParams(
     "module" -> module.toString,
     "action" -> action,
     "tag" -> "latest",
     "apikey" -> config.apiKey
   )
+
+  def getUrl(action: String): Task[URL] = for {
+    url <- super.getUrl
+    urlWithQueryParams = url.addQueryParams(queryParams(action))
+  } yield urlWithQueryParams
 
   final case class ResponseBody(
       status: String,

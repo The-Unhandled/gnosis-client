@@ -4,21 +4,49 @@ package blockscout
 import domain.*
 import domain.Tokens.ERC20Token
 import domain.gnosis.xDai
+import infra.CommonHttpClient
 
 import com.github.plokhotnyuk.jsoniter_scala.core.*
 import com.github.plokhotnyuk.jsoniter_scala.macros.*
 import zio.*
 import zio.http.*
 
-import javax.naming.ConfigurationException
-
 final class BlockscoutClient(
     val config: BlockscoutConfig,
     httpClient: Client
-) extends AccountsClient
+) extends CommonHttpClient
+    with AccountsClient
     with TokensClient:
 
   import BlockscoutClient.*
+
+  final val apiKey = config.apiKey
+  final val uri = config.url
+
+  override def getxDaiBalance(address: String): Task[xDai] =
+    (for
+      url <- getUrl
+      createurl = url
+        ./("addresses")
+        ./(address)
+      response <- request[AccountResponse](createurl)
+    yield response.coinBalance)
+      .provide(ZLayer.succeed(httpClient), Scope.default)
+
+  override def getTokenBalances(address: String): Task[Set[TokenBalance]] =
+    (for
+      url <- getUrl
+      createurl = url
+        ./("addresses")
+        ./(address)
+        ./("token-balances")
+      tokenBalancesResponse <- request[Set[TokenBalancesResponse]](createurl)
+      tokenBalances = tokenBalancesResponse.flatMap(r =>
+        r.token.toERC20Token.map(erc20 => TokenBalance(erc20, r.value))
+      )
+    yield tokenBalances).provide(ZLayer.succeed(httpClient), Scope.default)
+
+object BlockscoutClient:
 
   final case class AccountResponse(coinBalance: xDai)
 
@@ -27,56 +55,20 @@ final class BlockscoutClient(
       CodecMakerConfig.withFieldNameMapper(JsonCodecMaker.enforce_snake_case)
     )
 
-  override def getxDaiBalance(address: String): Task[xDai] =
-
-    // FIXME:
-    val url: URL = URL
-      .fromURI(config.url)
-      .getOrElse(throw new ConfigurationException("Invalid URL"))
-      ./("addresses")
-      ./(address)
-      .addQueryParams(QueryParams("apikey" -> config.apiKey))
-
-    (for
-      response <- httpClient.url(url).get("/")
-      responseBody <- response.body.asString
-      coinBalance <- ZIO
-        .attempt(
-          readFromString[AccountResponse](responseBody)
-        )
-        .map(_.coinBalance)
-    yield coinBalance).provideSomeLayer(Scope.default)
-
-  override def getTokenBalances(address: String): Task[Set[TokenBalance]] =
-    // FIXME:
-    val url: URL = URL
-      .fromURI(config.url)
-      .getOrElse(throw new ConfigurationException("Invalid URL"))
-      ./("addresses")
-      ./(address)
-      ./("token-balances")
-      .addQueryParams(QueryParams("apikey" -> config.apiKey))
-
-    (for
-      response <- httpClient.url(url).get("/")
-      responseBody <- response.body.asString
-      tokenBalancesResponse <- ZIO
-        .attempt(
-          readFromString[Set[TokenBalancesResponse]](responseBody)
-        )
-      tokenBalances = tokenBalancesResponse.flatMap(r => r.token.toERC20Token.map(erc20 => TokenBalance(erc20, r.value)))
-    yield tokenBalances).provideSomeLayer(Scope.default)
-
-object BlockscoutClient:
-
-  case class TokenResponse(name: Option[String], symbol: Option[String], address: String):
-    def toERC20Token: Option[ERC20Token] = symbol.flatMap(ERC20Token(_, address))
+  case class TokenResponse(
+      name: Option[String],
+      symbol: Option[String],
+      address: String
+  ):
+    def toERC20Token: Option[ERC20Token] =
+      symbol.flatMap(ERC20Token(_, address))
 
   case class TokenBalancesResponse(token: TokenResponse, value: Balance)
 
   object TokenBalancesResponse:
 
-    given codec: JsonValueCodec[Set[TokenBalancesResponse]] = JsonCodecMaker.make
+    given codec: JsonValueCodec[Set[TokenBalancesResponse]] =
+      JsonCodecMaker.make
 
   val layer: ZLayer[Client, Config.Error, BlockscoutClient] =
     ZLayer {

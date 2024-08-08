@@ -9,6 +9,7 @@ import com.github.plokhotnyuk.jsoniter_scala.macros.*
 
 /** @author
   *   Petros Siatos
+  *
   * @see
   *   [[https://docs.soliditylang.org/en/latest/abi-spec.html#json Solidity ABI Spec]]
   */
@@ -17,7 +18,9 @@ object AbiContract:
   sealed trait AbiType:
     def `type`: ABI_METHOD_TYPE
 
-  final case class Function(
+  // Jsoniter cannot derive method if it is capitalized.
+  // Haven't found a way to override this. Custom codec in jsoniter is atrocious.
+  final case class function(
       constant: Boolean,
       inputs: Set[AbiFunctionIO],
       name: String,
@@ -28,15 +31,37 @@ object AbiContract:
     override val `type`: ABI_METHOD_TYPE = ABI_METHOD_TYPE.FUNCTION
   }
 
-  object Function:
-    given abiFunctionCodec: JsonValueCodec[Function] = JsonCodecMaker.make
+  object function:
+    given abiFunctionCodec: JsonValueCodec[function] = JsonCodecMaker.make
+
+  final case class event(
+      name: String,
+      anonymous: Boolean,
+      inputs: Set[AbiFunctionIO]
+  ) extends AbiType {
+    override val `type`: ABI_METHOD_TYPE = ABI_METHOD_TYPE.EVENT
+  }
+
+  object event:
+    given codec: JsonValueCodec[event] = JsonCodecMaker.make
+
+  final case class fallback(
+      payable: Boolean,
+      stateMutability: STATE_MUTABILITY
+  ) extends AbiType {
+    override val `type`: ABI_METHOD_TYPE = ABI_METHOD_TYPE.FALLBACK
+  }
+
+  object fallback:
+    given codec: JsonValueCodec[fallback] = JsonCodecMaker.make
 
   enum ABI_METHOD_TYPE:
     case FUNCTION extends ABI_METHOD_TYPE
     case CONSTRUCTOR extends ABI_METHOD_TYPE
     case RECEIVE extends ABI_METHOD_TYPE
     case FALLBACK extends ABI_METHOD_TYPE
-  
+    case EVENT extends ABI_METHOD_TYPE
+    case ERROR extends ABI_METHOD_TYPE
 
   enum STATE_MUTABILITY extends Enum[STATE_MUTABILITY]:
     case PURE extends STATE_MUTABILITY
@@ -45,7 +70,8 @@ object AbiContract:
     case NONPAYABLE extends STATE_MUTABILITY
 
   object STATE_MUTABILITY:
-    given codec: JsonValueCodec[STATE_MUTABILITY] = createEnumCodec[STATE_MUTABILITY](classOf[STATE_MUTABILITY])
+    given codec: JsonValueCodec[STATE_MUTABILITY] =
+      createEnumCodec[STATE_MUTABILITY](classOf[STATE_MUTABILITY])
 
   case class AbiFunctionIO(name: String, `type`: ABI_IO_TYPE)
 
@@ -57,8 +83,10 @@ object AbiContract:
     case UINT256 extends ABI_IO_TYPE
 
   object ABI_IO_TYPE:
-    given codec: JsonValueCodec[ABI_IO_TYPE] = createEnumCodec[ABI_IO_TYPE](classOf[ABI_IO_TYPE])
+    given codec: JsonValueCodec[ABI_IO_TYPE] =
+      createEnumCodec[ABI_IO_TYPE](classOf[ABI_IO_TYPE])
 
+  given abiTypeSetCodec: JsonValueCodec[Set[AbiType]] = JsonCodecMaker.make
 
   given abiTypeCodec: JsonValueCodec[AbiType] =
     JsonCodecMaker.make(

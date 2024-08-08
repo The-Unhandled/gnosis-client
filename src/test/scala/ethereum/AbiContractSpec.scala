@@ -21,8 +21,8 @@ object AbiContractSpec extends ZIOSpecDefault:
       val contractjson =
         Source.fromResource("wxdaiContract.json").getLines().mkString
 
-      val contract = readFromString[AbiType](contractjson)
-      val expectedFunction = Function(
+      val contracts = readFromString[Set[AbiType]](contractjson)
+      val expectedFunction = function(
         constant = false,
         name = "approve",
         inputs = Set(
@@ -37,7 +37,7 @@ object AbiContractSpec extends ZIOSpecDefault:
       )
       
       assertTrue(
-        contract == expectedFunction
+        contracts.contains(expectedFunction)
       )
     }
   )

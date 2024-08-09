@@ -21,9 +21,9 @@ object AbiContract:
   // Jsoniter cannot derive method if it is capitalized.
   // Haven't found a way to override this. Custom codec in jsoniter is atrocious.
   final case class function(
+      name: String,
       constant: Boolean,
       inputs: Set[AbiFunctionIO],
-      name: String,
       outputs: Set[AbiFunctionIO],
       payable: Boolean,
       stateMutability: STATE_MUTABILITY
@@ -32,6 +32,17 @@ object AbiContract:
   }
 
   object function:
+
+    def apply(name: String, inputs: Set[AbiFunctionIO]): function =
+      function(
+        name = name,
+        constant = false,
+        inputs = inputs,
+        outputs = Set.empty,
+        payable = false,
+        stateMutability = STATE_MUTABILITY.NONPAYABLE
+      )
+
     given abiFunctionCodec: JsonValueCodec[function] = JsonCodecMaker.make
 
   final case class event(

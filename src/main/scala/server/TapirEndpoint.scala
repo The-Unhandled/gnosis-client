@@ -1,7 +1,7 @@
 package xyz.forsaken.gnosisclient
 package server
 
-import sttp.tapir.PublicEndpoint
+import sttp.tapir.{AnyEndpoint, PublicEndpoint}
 import sttp.tapir.ztapir.*
 import zio.ZIO
 import zio.http.{Response, Routes}
@@ -23,4 +23,6 @@ trait TapirEndpoint:
       logic(input).mapError(_.getMessage)
     }
 
+  def endpoints: List[AnyEndpoint]
+  
   def routes: Routes[Any, Response]

@@ -5,7 +5,7 @@ import domain.*
 import gnosisscan.GethProxyClient
 import slack.SlackClient
 
-import sttp.tapir.PublicEndpoint
+import sttp.tapir.{AnyEndpoint, PublicEndpoint}
 import sttp.tapir.server.ziohttp.ZioHttpInterpreter
 import sttp.tapir.ztapir.*
 import zio.*
@@ -23,7 +23,7 @@ final class BalanceEndpointImpl(
     slackClient: SlackClient
 ) extends BalanceEndpoint:
 
-  private def xdaiBalanceLogic(address: String): ZIO[Any, Throwable, String] =
+  private def xdaiBalanceLogic(address: String): Task[String] =
     for
       xDaiBalance <- accountsClient.getxDaiBalance(address)
       tokensBalance <- tokensClient.getTokenBalances(address)
@@ -40,6 +40,8 @@ final class BalanceEndpointImpl(
       .in(path[String]("address"))
       .out(stringBody)
 
+  override def endpoints: List[AnyEndpoint] = xdaiBalanceEndpoint :: Nil
+  
   def xdaiBalanceRoute: Routes[Any, Response] =
     ZioHttpInterpreter().toHttp(
       wrapLogic(xdaiBalanceEndpoint, xdaiBalanceLogic)

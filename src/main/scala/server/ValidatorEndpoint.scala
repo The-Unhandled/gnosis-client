@@ -10,9 +10,9 @@ import com.github.plokhotnyuk.jsoniter_scala.macros.JsonCodecMaker
 import sttp.tapir.generic.auto.*
 import sttp.tapir.server.ziohttp.ZioHttpInterpreter
 import sttp.tapir.ztapir.*
-import sttp.tapir.{PublicEndpoint, Schema}
+import sttp.tapir.{AnyEndpoint, PublicEndpoint, Schema}
 import zio.http.*
-import zio.{ZIO, ZLayer}
+import zio.{ZIO, ZLayer, Task}
 
 trait ValidatorEndpoint extends TapirEndpoint:
   override def routes: Routes[Any, Response] = getValidatorsRoute
@@ -22,21 +22,25 @@ trait ValidatorEndpoint extends TapirEndpoint:
 final class ValidatorEndpointImpl(
     validatorsClient: ValidatorsClient,
     slackClient: SlackClient
-) extends ValidatorEndpoint with JsoniterToTapirCodec:
+) extends ValidatorEndpoint
+    with JsoniterToTapirCodec:
 
   given codec: JsonValueCodec[Set[Validator]] = JsonCodecMaker.make
-  
-  private def getValidatorsLogic: ZIO[Any, Throwable, Set[Validator]] =
+
+  private def getValidatorsLogic: Task[Set[Validator]] =
     for
       validators <- validatorsClient.getValidators
       message = validators.mkString("\n")
       _ <- slackClient.notify("Validators: \n" + message)
     yield validators
-  
-  private def getValidatorsEndpoint: PublicEndpoint[Unit, String, Set[Validator], Any] =
+
+  private def getValidatorsEndpoint
+      : PublicEndpoint[Unit, String, Set[Validator], Any] =
     baseEndpoint
       .in("validators")
       .out(customCodecJsonBody[Set[Validator]])
+
+  override def endpoints: List[AnyEndpoint] = getValidatorsEndpoint :: Nil
 
   def getValidatorsRoute: Routes[Any, Response] =
     ZioHttpInterpreter().toHttp(

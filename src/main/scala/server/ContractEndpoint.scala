@@ -4,7 +4,7 @@ package server
 import gnosisscan.ContractsClient
 import slack.SlackClient
 
-import sttp.tapir.PublicEndpoint
+import sttp.tapir.{AnyEndpoint, PublicEndpoint}
 import sttp.tapir.server.ziohttp.ZioHttpInterpreter
 import sttp.tapir.ztapir.*
 import zio.*
@@ -20,7 +20,7 @@ final class ContractEndpointImpl(
     slackClient: SlackClient
 ) extends ContractEndpoint:
 
-  private def getAbiLogic(address: String): ZIO[Any, Throwable, String] =
+  private def getAbiLogic(address: String): Task[String] =
     for
       contract <- contractsClient.getAbi(address)
       _ <- slackClient.notify(s"Your contract is: $contract")
@@ -32,6 +32,7 @@ final class ContractEndpointImpl(
       .in(path[String]("address"))
       .out(stringBody)
 
+  override def endpoints: List[AnyEndpoint] = getAbiEndpoint :: Nil
 
   def getAbiRoute: Routes[Any, Response] =
     ZioHttpInterpreter().toHttp(wrapLogic(getAbiEndpoint, getAbiLogic))

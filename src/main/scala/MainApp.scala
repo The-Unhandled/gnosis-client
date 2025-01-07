@@ -31,14 +31,7 @@ object MainApp extends ZIOAppDefault:
         .idleTimeout(30.seconds)
         .port(c.port)
     })
-
-  private def errorHandler: Throwable => UIO[Response] =
-    e =>
-      for {
-        _ <- ZIO.logErrorCause("Error", Cause.fail(e))
-        response = Response.text("OOPS").status(Status.InternalServerError)
-      } yield response
-
+  
   def run =
     (for
       balanceEndpoint <- ZIO.service[BalanceEndpoint]
@@ -47,10 +40,7 @@ object MainApp extends ZIOAppDefault:
       routes = Routes(
         textRoute
       ) ++ balanceEndpoint.routes ++ contractEndpoint.routes ++ validatorEndpoint.routes
-      routesWithoutError: Routes[Any, Response] = routes.handleErrorZIO(
-        errorHandler
-      )
-      _ <- Server.serve(routesWithoutError)
+      _ <- Server.serve(routes)
     yield ())
       .provide(
         serverConfig,

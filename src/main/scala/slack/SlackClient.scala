@@ -18,11 +18,11 @@ trait SlackClient:
 class SlackClientLayer(config: SlackConfig, httpClient: Client)
     extends SlackClient:
 
-  final val SLACK_CHANNEL = "gnosis-client"
+  private final val SLACK_CHANNEL = "gnosis-client"
 
   case class SlackMessage(text: String)
 
-  object SlackMessage:
+  private object SlackMessage:
     given codec: JsonValueCodec[SlackMessage] = JsonCodecMaker.make
 
   def notify(message: String): Task[Unit] =

@@ -1,37 +1,47 @@
 package xyz.forsaken.gnosisclient
 package server
 
-import beaconcha.BeaconchaClient.BeaconchaResponse
 import domain.ValidatorsClient
 import slack.SlackClient
 import validators.Validator
 
-import com.github.plokhotnyuk.jsoniter_scala.core.{JsonValueCodec, writeToString}
+import com.github.plokhotnyuk.jsoniter_scala.core.JsonValueCodec
 import com.github.plokhotnyuk.jsoniter_scala.macros.JsonCodecMaker
-import zio.ZLayer
+import sttp.tapir.generic.auto.*
+import sttp.tapir.server.ziohttp.ZioHttpInterpreter
+import sttp.tapir.ztapir.*
+import sttp.tapir.{PublicEndpoint, Schema}
 import zio.http.*
+import zio.{ZIO, ZLayer}
 
-trait ValidatorEndpoint extends Endpoint:
-  override def routes: Routes[Any, Throwable] = Routes(getValidators)
+trait ValidatorEndpoint extends TapirEndpoint:
+  override def routes: Routes[Any, Response] = getValidatorsRoute
 
-  def getValidators: Route[Any, Throwable]
+  def getValidatorsRoute: Routes[Any, Response]
 
 final class ValidatorEndpointImpl(
     validatorsClient: ValidatorsClient,
     slackClient: SlackClient
-) extends ValidatorEndpoint:
+) extends ValidatorEndpoint with JsoniterToTapirCodec:
 
-  def getValidators: Route[Any, Throwable] =
+  given codec: JsonValueCodec[Set[Validator]] = JsonCodecMaker.make
+  
+  private def getValidatorsLogic: ZIO[Any, Throwable, Set[Validator]] =
+    for
+      validators <- validatorsClient.getValidators
+      message = validators.mkString("\n")
+      _ <- slackClient.notify("Validators: \n" + message)
+    yield validators
+  
+  private def getValidatorsEndpoint: PublicEndpoint[Unit, String, Set[Validator], Any] =
+    baseEndpoint
+      .in("validators")
+      .out(customCodecJsonBody[Set[Validator]])
 
-    given codec: JsonValueCodec[Set[Validator]] = JsonCodecMaker.make
-    
-    Method.GET / "validators" -> handler {
-      for
-        validators <- validatorsClient.getValidators
-        message = validators.mkString("\n")
-        _ <- slackClient.notify("Validators: \n" + message)
-      yield Response.json(writeToString(validators))
-    }
+  def getValidatorsRoute: Routes[Any, Response] =
+    ZioHttpInterpreter().toHttp(
+      wrapLogic(getValidatorsEndpoint, _ => getValidatorsLogic)
+    )
 
 object ValidatorEndpointImpl:
   val layer = ZLayer.fromFunction(ValidatorEndpointImpl(_, _))

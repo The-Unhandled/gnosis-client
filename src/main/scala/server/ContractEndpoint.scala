@@ -4,27 +4,37 @@ package server
 import gnosisscan.ContractsClient
 import slack.SlackClient
 
-import zio.ZLayer
-import zio.http.*
+import sttp.tapir.PublicEndpoint
+import sttp.tapir.server.ziohttp.ZioHttpInterpreter
+import sttp.tapir.ztapir.*
+import zio.*
+import zio.http.{Response, Route, Routes}
 
-trait ContractEndpoint extends Endpoint:
-  override def routes: Routes[Any, Throwable] = Routes(getAbiRoute)
+trait ContractEndpoint extends TapirEndpoint:
+  override def routes: Routes[Any, Response] = getAbiRoute
 
-  def getAbiRoute: Route[Any, Throwable]
+  def getAbiRoute: Routes[Any, Response]
 
 final class ContractEndpointImpl(
     contractsClient: ContractsClient,
     slackClient: SlackClient
 ) extends ContractEndpoint:
 
-  def getAbiRoute: Route[Any, Throwable] =
-    Method.GET / "contract" / string("address") -> handler {
-      (address: String, req: Request) =>
-        for
-          contract <- contractsClient.getAbi(address)
-          _ <- slackClient.notify(s"Your contract is: $contract")
-        yield Response.text(contract)
-    }
+  private def getAbiLogic(address: String): ZIO[Any, Throwable, String] =
+    for
+      contract <- contractsClient.getAbi(address)
+      _ <- slackClient.notify(s"Your contract is: $contract")
+    yield contract
+
+  private def getAbiEndpoint: PublicEndpoint[String, String, String, Any] =
+    baseEndpoint
+      .in("contract")
+      .in(path[String]("address"))
+      .out(stringBody)
+
+
+  def getAbiRoute: Routes[Any, Response] =
+    ZioHttpInterpreter().toHttp(wrapLogic(getAbiEndpoint, getAbiLogic))
 
 object ContractEndpointImpl:
   val layer = ZLayer.fromFunction(ContractEndpointImpl(_, _))

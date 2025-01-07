@@ -5,13 +5,16 @@ import domain.*
 import gnosisscan.GethProxyClient
 import slack.SlackClient
 
-import zio.ZLayer
-import zio.http.*
+import sttp.tapir.PublicEndpoint
+import sttp.tapir.server.ziohttp.ZioHttpInterpreter
+import sttp.tapir.ztapir.*
+import zio.*
+import zio.http.{Response, Route, Routes}
 
-trait BalanceEndpoint extends Endpoint:
-  override def routes: Routes[Any, Throwable] = Routes(xdaiBalanceRoute)
+trait BalanceEndpoint extends TapirEndpoint:
+  override def routes: Routes[Any, Response] = xdaiBalanceRoute
 
-  def xdaiBalanceRoute: Route[Any, Throwable]
+  def xdaiBalanceRoute: Routes[Any, Response]
 
 final class BalanceEndpointImpl(
     accountsClient: AccountsClient,
@@ -20,20 +23,27 @@ final class BalanceEndpointImpl(
     slackClient: SlackClient
 ) extends BalanceEndpoint:
 
-  def xdaiBalanceRoute: Route[Any, Throwable] =
-    Method.GET / "balance" / string("address") -> handler {
-      (address: String, req: Request) =>
-        for
-          xDaiBalance <- accountsClient.getxDaiBalance(address)
-          tokensBalance <- tokensClient.getTokenBalances(address)
-          //sDaiBalance <- gethProxyClient.getBalance(SDAI, address)
-          //wxDaiBalance <- gethProxyClient.getBalance(WXDAI, address)
-          //message = s"Your balance is: $xDaiBalance xDai, $sDaiBalance sDai, $wxDaiBalance wxDai"
-          tokensBalanceMessage = tokensBalance.map(tb => s"${tb.token.symbol}: ${tb.balance}").mkString(", ")
-          message = s"Your balance is: $xDaiBalance xDai\n$tokensBalanceMessage"
-          _ <- slackClient.notify(message)
-        yield Response.text(message)
-    }
+  private def xdaiBalanceLogic(address: String): ZIO[Any, Throwable, String] =
+    for
+      xDaiBalance <- accountsClient.getxDaiBalance(address)
+      tokensBalance <- tokensClient.getTokenBalances(address)
+      tokensBalanceMessage = tokensBalance
+        .map(tb => s"${tb.token.symbol}: ${tb.balance}")
+        .mkString(", ")
+      message = s"Your balance is: $xDaiBalance xDai\n$tokensBalanceMessage"
+      _ <- slackClient.notify(message)
+    yield message
+
+  private def xdaiBalanceEndpoint: PublicEndpoint[String, String, String, Any] =
+    baseEndpoint
+      .in("balance")
+      .in(path[String]("address"))
+      .out(stringBody)
+
+  def xdaiBalanceRoute: Routes[Any, Response] =
+    ZioHttpInterpreter().toHttp(
+      wrapLogic(xdaiBalanceEndpoint, xdaiBalanceLogic)
+    )
 
 object BalanceEndpointImpl:
   val layer = ZLayer.fromFunction(BalanceEndpointImpl(_, _, _, _))

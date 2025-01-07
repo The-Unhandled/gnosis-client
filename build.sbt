@@ -15,6 +15,7 @@ libraryDependencies ++= Seq(
   "dev.zio" %% "zio-config-magnolia" % zioConfigVersion,
   "dev.zio" %% "zio-config" % zioConfigVersion,
   "dev.zio" %% "zio-logging" % "2.4.0",
+  "com.softwaremill.sttp.tapir" %% "tapir-zio-http-server" % "1.11.11",
   "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-core" % "2.33.0",
   "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-macros" % "2.33.0" % Provided,
 

@@ -12,6 +12,8 @@ import zio.config.typesafe.TypesafeConfigProvider
 import zio.http.*
 import zio.logging.consoleLogger
 import sttp.tapir.swagger.bundle.SwaggerInterpreter
+import aura.{AuraService, AuraServiceImpl}
+import grpc.aura.AuraGrpcClientImpl
 
 /** @author
   *   Petros Siatos
@@ -60,6 +62,8 @@ object MainApp extends ZIOAppDefault:
         // GnosisScanAccountsClient.layer,
         GnosisScanContractsClient.layer,
         GnosisScanGethProxyClient.layer,
+        AuraServiceImpl.layer,
+        AuraGrpcClientImpl.layer,
         SlackClientLayer.layer,
         Client.default,
         Server.live

@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "xyz.forsaken.gnosisclient.grpc";
+option objc_class_prefix = "AGS";
+
+package aura;
+
+service AuraService {
+  rpc GetAuraBalance (AuraRequest) returns (AuraResponse);
+}
+
+message AuraRequest {
+  string address = 1;
+}
+
+message AuraResponse {
+  double balance = 1;
+  double earned = 2;
+}

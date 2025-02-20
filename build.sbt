@@ -6,7 +6,7 @@ lazy val zioVersion = "2.1.15"
 lazy val zioConfigVersion = "4.0.3"
 lazy val zioHttpVersion = "3.0.1"
 lazy val http4sVersion = "1.0.0-M40"
-lazy val tapirVersion = "1.11.14"
+lazy val tapirVersion = "1.11.15"
 lazy val jsoniterVersion = "2.33.2"
 
 libraryDependencies ++= Seq(
@@ -16,12 +16,14 @@ libraryDependencies ++= Seq(
   "dev.zio" %% "zio-config-magnolia" % zioConfigVersion,
   "dev.zio" %% "zio-config" % zioConfigVersion,
   "dev.zio" %% "zio-logging" % "2.4.0",
+  "dev.zio" %% "zio-kafka" % "2.11.0",
   "com.softwaremill.sttp.tapir" %% "tapir-zio-http-server" % tapirVersion,
   "com.softwaremill.sttp.tapir" %% "tapir-swagger-ui-bundle" % tapirVersion,
   "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-core" % jsoniterVersion,
   "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-macros" % jsoniterVersion % Provided,
   "com.thesamet.scalapb" %% "scalapb-runtime-grpc" % scalapb.compiler.Version.scalapbVersion,
   "io.grpc" % "grpc-netty" % "1.70.0",
+
 
   // Test
   "dev.zio" %% "zio-test" % zioVersion % Test,

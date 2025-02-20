@@ -38,7 +38,7 @@ class SlackClientLayer(config: SlackConfig, httpClient: Client)
         .addHeader(Header.ContentType(MediaType.application.json))
         .post("")(Body.fromString(writeToString(SlackMessage(message))))
 
-      _ <- ZIO.logInfo(s"response: $response")
+      _ <- ZIO.logTrace(s"response: $response")
       _ <- ZIO.logInfo(s"Slack notification sent to $SLACK_CHANNEL: $message")
     yield ()).provideSomeLayer(Scope.default)
 

@@ -15,6 +15,8 @@ import sttp.tapir.swagger.bundle.SwaggerInterpreter
 import aura.{AuraService, AuraServiceImpl}
 import grpc.aura.AuraGrpcClientImpl
 
+import xyz.forsaken.gnosisclient.kafka.KafkaConsumer
+
 /** @author
   *   Petros Siatos
   */
@@ -40,6 +42,7 @@ object MainApp extends ZIOAppDefault:
       balanceEndpoint <- ZIO.service[BalanceEndpoint]
       contractEndpoint <- ZIO.service[ContractEndpoint]
       validatorEndpoint <- ZIO.service[ValidatorEndpoint]
+      kafkaConsumer <- ZIO.service[KafkaConsumer]
       routes = Routes(
         textRoute
       ) ++ balanceEndpoint.routes ++ contractEndpoint.routes ++ validatorEndpoint.routes
@@ -50,10 +53,12 @@ object MainApp extends ZIOAppDefault:
         "Gnosis Client API",
         "1.0")
       swaggerRoutes = ZioHttpInterpreter().toHttp(swaggerEndpoints)
+      _ <- kafkaConsumer.runConsumer
       _ <- Server.serve(routes ++ swaggerRoutes)
     yield ())
       .provide(
         serverConfig,
+        KafkaConsumer.layer,
         BalanceEndpointImpl.layer,
         ContractEndpointImpl.layer,
         ValidatorEndpointImpl.layer,

@@ -1,8 +1,8 @@
 package xyz.forsaken.gnosisclient
 package server
 
+import sttp.tapir.ztapir.{endpoint, *}
 import sttp.tapir.{AnyEndpoint, PublicEndpoint}
-import sttp.tapir.ztapir.*
 import zio.ZIO
 import zio.http.{Response, Routes}
 

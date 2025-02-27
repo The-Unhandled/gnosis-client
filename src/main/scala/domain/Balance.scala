@@ -2,7 +2,6 @@ package xyz.forsaken.gnosisclient
 package domain
 
 import com.github.plokhotnyuk.jsoniter_scala.core.*
-import com.github.plokhotnyuk.jsoniter_scala.macros.*
 
 /**
  * @author Petros Siatos

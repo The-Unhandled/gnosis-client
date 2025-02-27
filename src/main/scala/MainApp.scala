@@ -1,21 +1,20 @@
 package xyz.forsaken.gnosisclient
 
+import aura.{AuraService, AuraServiceImpl}
 import beaconcha.*
 import blockscout.*
 import gnosisscan.*
+import grpc.aura.AuraGrpcClientImpl
+import kafka.*
 import server.*
 import slack.SlackClientLayer
 
 import sttp.tapir.server.ziohttp.ZioHttpInterpreter
+import sttp.tapir.swagger.bundle.SwaggerInterpreter
 import zio.*
 import zio.config.typesafe.TypesafeConfigProvider
 import zio.http.*
 import zio.logging.consoleLogger
-import sttp.tapir.swagger.bundle.SwaggerInterpreter
-import aura.{AuraService, AuraServiceImpl}
-import grpc.aura.AuraGrpcClientImpl
-
-import xyz.forsaken.gnosisclient.kafka.KafkaConsumer
 
 /** @author
   *   Petros Siatos

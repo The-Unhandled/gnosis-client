@@ -28,6 +28,7 @@ trait CommonHttpClient:
       httpClient <- ZIO.service[Client]
       response <- httpClient.request(Request.get(url))
       responseBody <- response.body.asString
+      _ <- ZIO.logInfo(s"Response: $responseBody")
       response <- ZIO
         .attempt(
           readFromString[T](responseBody)

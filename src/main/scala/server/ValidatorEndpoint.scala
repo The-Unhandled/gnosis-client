@@ -12,7 +12,7 @@ import sttp.tapir.server.ziohttp.ZioHttpInterpreter
 import sttp.tapir.ztapir.*
 import sttp.tapir.{AnyEndpoint, PublicEndpoint, Schema}
 import zio.http.*
-import zio.{ZIO, ZLayer, Task}
+import zio.{Task, ZIO, ZLayer}
 
 trait ValidatorEndpoint extends TapirEndpoint:
   override def routes: Routes[Any, Response] = getValidatorsRoute

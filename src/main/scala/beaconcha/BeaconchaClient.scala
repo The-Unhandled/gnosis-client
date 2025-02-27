@@ -2,8 +2,6 @@ package xyz.forsaken.gnosisclient
 package beaconcha
 
 import domain.*
-import domain.Tokens.ERC20Token
-import domain.gnosis.xDai
 import infra.CommonHttpClient
 import validators.*
 
@@ -11,8 +9,6 @@ import com.github.plokhotnyuk.jsoniter_scala.core.*
 import com.github.plokhotnyuk.jsoniter_scala.macros.*
 import zio.*
 import zio.http.*
-
-import javax.naming.ConfigurationException
 
 final class BeaconchaClient(
     val config: BeaconchaConfig,

@@ -5,9 +5,9 @@ import domain.*
 import gnosisscan.GethProxyClient
 import slack.SlackClient
 
-import sttp.tapir.{AnyEndpoint, PublicEndpoint}
 import sttp.tapir.server.ziohttp.ZioHttpInterpreter
 import sttp.tapir.ztapir.*
+import sttp.tapir.{AnyEndpoint, PublicEndpoint}
 import zio.*
 import zio.http.{Response, Route, Routes}
 

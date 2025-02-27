@@ -1,9 +1,9 @@
 package xyz.forsaken.gnosisclient
 package grpc.aura
 
-import io.grpc.ManagedChannelBuilder
 import grpc.GrpcConfig
 
+import io.grpc.ManagedChannelBuilder
 import zio.*
 
 final class AuraGrpcClientImpl(stub: AuraServiceGrpc.AuraServiceStub) extends AuraGrpcClient:

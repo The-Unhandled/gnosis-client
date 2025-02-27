@@ -1,10 +1,11 @@
 package xyz.forsaken.gnosisclient
 package kafka
 
-import xyz.forsaken.gnosisclient.slack.SlackClient
-import zio._
-import zio.kafka.consumer._
-import zio.kafka.serde._
+import slack.SlackClient
+
+import zio.*
+import zio.kafka.consumer.*
+import zio.kafka.serde.*
 
 final class KafkaConsumer(consumer: Consumer, config: KafkaConfig, slackClient: SlackClient):
   def runConsumer: RIO[Any, Unit] =

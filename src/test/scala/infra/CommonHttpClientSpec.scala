@@ -1,8 +1,6 @@
 package xyz.forsaken.gnosisclient
 package infra
 
-import zio.test.ZIOSpecDefault
-
 import java.net.URI
 import zio.*
 import zio.http.*
@@ -14,7 +12,7 @@ import com.github.plokhotnyuk.jsoniter_scala.macros.*
 /** @author
   *   Petros Siatos
   */
-object CommonHttpClientSpec extends ZIOSpecDefault:
+object CommonHttpClientSpec extends DefaultSpec:
 
   private val localhost = "http://localhost"
 

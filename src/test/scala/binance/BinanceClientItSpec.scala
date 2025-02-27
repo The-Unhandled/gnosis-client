@@ -6,20 +6,12 @@ import domain.Price
 
 import com.github.plokhotnyuk.jsoniter_scala.core.*
 import zio.*
-import zio.config.typesafe.TypesafeConfigProvider
 import zio.http.Client
-import zio.logging.consoleLogger
-import zio.test.{ZIOSpecDefault, *}
+import zio.test.*
 
 import java.time.Instant
 
-object BinanceClientItSpec extends ZIOSpecDefault:
-
-  override val bootstrap: ZLayer[Any, Any, TestEnvironment] =
-    testEnvironment ++ (Runtime.removeDefaultLoggers >>> Runtime.setConfigProvider(
-      TypesafeConfigProvider
-        .fromResourcePath()
-    ) >>> consoleLogger())
+object BinanceClientItSpec extends DefaultSpec:
 
   override def spec: Spec[TestEnvironment, Any] =
     suite("BinanceClientSpec")(

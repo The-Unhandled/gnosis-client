@@ -14,7 +14,7 @@ import sttp.tapir.swagger.bundle.SwaggerInterpreter
 import zio.*
 import zio.config.typesafe.TypesafeConfigProvider
 import zio.http.*
-import zio.logging.consoleLogger
+import zio.logging.{ConsoleLoggerConfig, LogFilter, LogFormat, consoleLogger}
 
 /** @author
   *   Petros Siatos
@@ -25,7 +25,7 @@ object MainApp extends ZIOAppDefault:
     Runtime.removeDefaultLoggers >>> Runtime.setConfigProvider(
       TypesafeConfigProvider
         .fromResourcePath()
-    ) >>> consoleLogger()
+    ) >>> consoleLogger(ConsoleLoggerConfig(LogFormat.colored, LogFilter.LogLevelByNameConfig.default))
 
   private val textRoute =
     Method.GET / "hello" -> handler(Response.text("Hello World!"))

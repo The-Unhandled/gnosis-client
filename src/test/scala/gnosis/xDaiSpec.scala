@@ -5,7 +5,7 @@ import com.github.plokhotnyuk.jsoniter_scala.core.*
 import xyz.forsaken.gnosisclient.domain.gnosis.xDai
 import zio.test.*
 
-object xDaiSpec extends ZIOSpecDefault:
+object xDaiSpec extends DefaultSpec:
 
   def spec = suite("xDai")(
     test("extract value from Wei correctly") {

@@ -22,7 +22,7 @@ libraryDependencies ++= Seq(
   "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-core" % jsoniterVersion,
   "com.github.plokhotnyuk.jsoniter-scala" %% "jsoniter-scala-macros" % jsoniterVersion % Provided,
   "com.thesamet.scalapb" %% "scalapb-runtime-grpc" % scalapb.compiler.Version.scalapbVersion,
-  "io.grpc" % "grpc-netty" % "1.70.0",
+  "io.grpc" % "grpc-netty" % "1.71.0",
 
   // Test
   "dev.zio" %% "zio-test" % zioVersion % Test,

@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "xyz.forsaken.gnosisclient.grpc";
+option objc_class_prefix = "AGS";
+
+package chainlink;
+
+service ChainlinkService {
+  rpc GetPriceFeed (PriceFeedRequest) returns (PriceFeedResponse);
+}
+
+message PriceFeedRequest {
+  string chain = 1;
+  string pair = 2;
+}
+
+message PriceFeedResponse {
+  double price = 1;
+}

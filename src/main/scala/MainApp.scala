@@ -1,10 +1,12 @@
 package xyz.forsaken.gnosisclient
 
-import aura.{AuraService, AuraServiceImpl}
+import aura.*
+import chainlink.*
 import beaconcha.*
 import blockscout.*
 import gnosisscan.*
-import grpc.aura.AuraGrpcClientImpl
+import grpc.aura.*
+import grpc.chainlink.*
 import kafka.*
 import server.*
 import slack.SlackClientLayer
@@ -68,6 +70,8 @@ object MainApp extends ZIOAppDefault:
         GnosisScanGethProxyClient.layer,
         AuraServiceImpl.layer,
         AuraGrpcClientImpl.layer,
+        ChainlinkServiceImpl.layer,
+        ChainlinkGrpcClientImpl.layer,
         SlackClientLayer.layer,
         Client.default,
         Server.live

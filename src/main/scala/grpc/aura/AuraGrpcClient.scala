@@ -2,8 +2,6 @@ package xyz.forsaken.gnosisclient
 
 package grpc.aura
 
-import aura.*
-
 import zio.*
 
 trait AuraGrpcClient:

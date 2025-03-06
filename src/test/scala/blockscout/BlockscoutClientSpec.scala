@@ -20,7 +20,7 @@ object BlockscoutClientSpec extends DefaultSpec:
     suite("BlockscoutClient")(
       test("decode correctly") {
         val tokens =
-          Source.fromResource("tokensResponse.json").getLines().mkString
+          Source.fromResource("tokens-response.json").getLines().mkString
 
         val result = readFromString[Set[TokenBalancesResponse]](tokens)
 

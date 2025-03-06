@@ -11,7 +11,7 @@ import zio.test.*
 
 import java.time.Instant
 
-object BinanceClientItSpec extends DefaultSpec:
+object BinanceClientIntegrationSpec extends DefaultSpec:
 
   override def spec: Spec[TestEnvironment, Any] =
     suite("BinanceClientSpec")(

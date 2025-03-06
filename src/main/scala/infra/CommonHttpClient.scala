@@ -23,10 +23,14 @@ trait CommonHttpClient:
       urlWithApiKey = url.addQueryParams(QueryParams("apikey" -> apiKey))
     } yield urlWithApiKey
 
-  protected[infra] def request[T](url: URL)(implicit codec:  JsonValueCodec[T]): ZIO[Client & Scope, Throwable, T] =
+  protected[infra] def request[T](url: URL, body: Option[Body] = None)(implicit codec:  JsonValueCodec[T]): ZIO[Client & Scope, Throwable, T] =
     for
       httpClient <- ZIO.service[Client]
-      response <- httpClient.request(Request.get(url))
+      request = body match {
+        case Some(b) => Request.post(url, b).addHeader(Header.ContentType(MediaType.application.json))
+        case None    => Request.get(url)
+      }   
+      response <- httpClient.request(request)
       responseBody <- response.body.asString
       _ <- ZIO.logInfo(s"Response: $responseBody")
       response <- ZIO

@@ -4,6 +4,7 @@ import aura.*
 import chainlink.*
 import beaconcha.*
 import blockscout.*
+import discord.DiscordClient
 import gnosisscan.*
 import grpc.aura.*
 import grpc.chainlink.*
@@ -11,6 +12,7 @@ import kafka.*
 import server.*
 import slack.SlackClientLayer
 
+import sttp.client4.httpclient.zio.HttpClientZioBackend
 import sttp.tapir.server.ziohttp.ZioHttpInterpreter
 import sttp.tapir.swagger.bundle.SwaggerInterpreter
 import zio.*
@@ -55,6 +57,8 @@ object MainApp extends ZIOAppDefault:
         "1.0")
       swaggerRoutes = ZioHttpInterpreter().toHttp(swaggerEndpoints)
       _ <- kafkaConsumer.runConsumer
+      discordService <- ZIO.service[DiscordClient]
+      _ <- discordService.connectWebSocket()
       _ <- Server.serve(routes ++ swaggerRoutes)
     yield ())
       .provide(
@@ -65,6 +69,7 @@ object MainApp extends ZIOAppDefault:
         ValidatorEndpointImpl.layer,
         BlockscoutClient.layer,
         BeaconchaClient.layer,
+        DiscordClient.layer,
         // GnosisScanAccountsClient.layer,
         GnosisScanContractsClient.layer,
         GnosisScanGethProxyClient.layer,
@@ -74,5 +79,7 @@ object MainApp extends ZIOAppDefault:
         ChainlinkGrpcClientImpl.layer,
         SlackClientLayer.layer,
         Client.default,
-        Server.live
+        HttpClientZioBackend.layer(),
+        Server.live,
+        Scope.default
       )
